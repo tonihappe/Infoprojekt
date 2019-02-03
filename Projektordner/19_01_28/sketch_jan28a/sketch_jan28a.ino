@@ -1,7 +1,7 @@
 #include <Adafruit_NeoPixel.h>
 
 #define PIN 6
-#define ANZAHL 59
+#define ANZAHL 100
 
 Adafruit_NeoPixel strip = Adafruit_NeoPixel(PIN,ANZAHL,NEO_GRBW + NEO_KHZ800);
 
