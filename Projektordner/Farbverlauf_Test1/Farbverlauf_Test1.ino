@@ -1,8 +1,8 @@
 #include <FastLED.h>
 #define LEDZAHL 100
 #define PIN 6
-#define HELL 50
-#define wait 1000
+#define HELL 255
+#define wait 100
 #define matrixbreite 10
 #define matrixhöhe 10
 
@@ -46,8 +46,9 @@ void FarbverlaufR()
     Serial.println(test);
 
     matrix[n].setRGB(test, 0, 0);
+    matrix[n-1].setRGB(0,0,0);
     FastLED.show();
-
+    delay(wait/10);
   }
 }
 void FarbverlaufG()
@@ -59,8 +60,9 @@ void FarbverlaufG()
     test = 0;
     test = 255 / (LEDZAHL / n);
     matrix[n].setRGB(0, test, 0);
+    matrix[n-1].setRGB(0,0,0);
     FastLED.show();
-
+    delay(wait/10);
   }
 }
 void FarbverlaufB()
@@ -73,7 +75,10 @@ void FarbverlaufB()
     test = 0;
     test = 255 / (LEDZAHL / n);
     matrix[n].setRGB(0, 0, test);
+    matrix[n-1].setRGB(0,0,0);
     FastLED.show();
+    delay(wait/10);
+    
 
   }
 }

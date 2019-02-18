@@ -1,10 +1,16 @@
 
-import
+##import
 
-print("Bitte geben Sie den Pfad der 10x10 Pixel großen BMP Datei ein:\n")
-path=input()
-eing= str(open(path,"r"))
+#print("Bitte geben Sie den Pfad der 10x10 Pixel großen BMP Datei ein:\n")
+#path=str(input())
+#eing= open(path,"r")
+#print(eing.read())
+##abc=Image.open
 
-abc=Image.open
+#eing.read()
 
-eing.read()
+import binascii
+filename = "bild.bmp"
+with open(filename, "rb") as f:
+    content = f.read()
+print(binascii.hexlify(content))
