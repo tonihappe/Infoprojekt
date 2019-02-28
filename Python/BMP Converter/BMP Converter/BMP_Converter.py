@@ -13,4 +13,11 @@ import binascii
 filename = "bild.bmp"
 with open(filename, "rb") as f:
     content = f.read()
-print(binascii.hexlify(content))
+
+print("\n\n")
+hexunbearb=str(binascii.hexlify(content))
+hexbearb=hexunbearb
+print(hexbearb)
+ausgabe=open("Ausgabe.dat", "w")
+ausgabe.write(str(hexunbearb))
+ausgabe.close()
