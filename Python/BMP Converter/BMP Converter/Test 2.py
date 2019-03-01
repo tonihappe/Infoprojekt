@@ -1,3 +1,3 @@
 #import sys
 import PIL
-import io
+#import io

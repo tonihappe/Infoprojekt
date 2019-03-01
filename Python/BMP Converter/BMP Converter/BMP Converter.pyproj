@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>1b6ace08-375a-4fc5-9877-48a02b64eec4</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Test 2.py</StartupFile>
+    <StartupFile>RGB Einzeln.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,6 +21,8 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="RGB Einzeln.py" />
+    <Compile Include="RGB Zusammen.py" />
     <Compile Include="Test 2.py" />
     <Compile Include="BMP_Converter.py" />
   </ItemGroup>

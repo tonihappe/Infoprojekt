@@ -2,7 +2,7 @@
 
 #define LEDZAHL 100
 #define PIN 6
-#define HELL 255
+#define HELL 10
 #define wait 100
 #define matrixbreite 10
 #define matrixhöhe 10
