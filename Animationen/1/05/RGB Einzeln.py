@@ -1,15 +1,15 @@
 
-filename=input("Bitte geben Sie den Dateinamen ein (ohne Endung): ")
-rgbfile =open(filename+".ppm","r")
+
+rgbfile =open("bild.ppm","r")
 rgbwerte=str(rgbfile.read())
 #print (rgbwerte)
 
 r=[0]*99
 g=[0]*99
 b=[0]*99
-ausgr=open(filename+"R.txt", "w")
-ausgg=open(filename+"G.txt", "w")
-ausgb=open(filename+"B.txt", "w")
+ausgr=open("AusgabeR.txt", "w")
+ausgg=open("AusgabeG.txt", "w")
+ausgb=open("AusgabeB.txt", "w")
 #ausg.write("'")
 
 #Dateianfang "abschneiden"

@@ -1,5 +1,5 @@
 
-filename=input("Bitte geben Sie den Dateinamen ein (ohne Endung): ")
+filename=str(input("Bitte geben Sie den Dateinamen ein (ohne Endung): "))
 rgbfile =open(filename+".ppm","r")
 rgbwerte=str(rgbfile.read())
 #print (rgbwerte)

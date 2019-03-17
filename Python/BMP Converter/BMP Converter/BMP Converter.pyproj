@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>1b6ace08-375a-4fc5-9877-48a02b64eec4</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>RGB Einzeln.py</StartupFile>
+    <StartupFile>Animationen\1\05\RGB Einzeln.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,10 +21,33 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Animationen\1\05\RGB Einzeln.py" />
     <Compile Include="RGB Einzeln.py" />
     <Compile Include="RGB Zusammen.py" />
     <Compile Include="Test 2.py" />
     <Compile Include="BMP_Converter.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Animationen\" />
+    <Folder Include="Animationen\1\" />
+    <Folder Include="Animationen\1\01\" />
+    <Folder Include="Animationen\1\02\" />
+    <Folder Include="Animationen\1\03\" />
+    <Folder Include="Animationen\1\04\" />
+    <Folder Include="Animationen\1\05\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Animationen\1\01.psd" />
+    <Content Include="Animationen\1\01\01.bmp" />
+    <Content Include="Animationen\1\01\01.ppm" />
+    <Content Include="Animationen\1\02\02.bmp" />
+    <Content Include="Animationen\1\02\02.ppm" />
+    <Content Include="Animationen\1\03\03.bmp" />
+    <Content Include="Animationen\1\03\03.ppm" />
+    <Content Include="Animationen\1\04\04.bmp" />
+    <Content Include="Animationen\1\04\04.ppm" />
+    <Content Include="Animationen\1\05\05.bmp" />
+    <Content Include="Animationen\1\05\05.ppm" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
