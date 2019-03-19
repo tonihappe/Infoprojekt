@@ -2,7 +2,6 @@
 filename=str(input("Bitte geben Sie den Dateinamen ein (ohne Endung): "))
 rgbfile =open(filename+".ppm","r")
 rgbwerte=str(rgbfile.read())
-VarName=input("Bitte geben Sie den gewünschten Namen der Variablen ein: ")
 #print (rgbwerte)
 
 r=[0]*99
@@ -44,33 +43,15 @@ for i in range(0,n,1):
 	rgbwerte=test[2]
 	print(b[i]+"\n")
 	
-	#if i==0:
-	#	ausgr.write("const int "+VarName+" {"+str(r[i])+",")
-	#	ausgg.write("const int "+VarName+" {"+str(g[i])+",")
-	#	ausgb.write("const int "+VarName+" {"+str(b[i])+",")
-	#if (i>=1 and i<=98):
-	#	ausgr.write(str(r[i])+",")
-	#	ausgg.write(str(g[i])+",")
-	#	ausgb.write(str(b[i])+",")
-	#if i==99:
-	#	ausgr.write(str(r[i])+"};")
-	#	ausgg.write(str(g[i])+"};")
-	#	ausgb.write(str(b[i])+"};")
 	if i==0:
-		Rstr = ("const int "+VarName+"R {"+str(r[i])+",")
-		Gstr=("const int "+VarName+"G {"+str(g[i])+",")
-		Bstr=("const int "+VarName+"B {"+str(b[i])+",")
-	if (i>=1 and i<=98):
-		Rstr=Rstr(str(r[i])+",")
-		Gstr=Gstr(str(g[i])+",")
-		Bstr=Bstr(str(b[i])+",")
-	if i==99:
-		Rstr=Rstr(str(r[i])+"};")
-		Gstr=Gstr(str(g[i])+"};")
-		Bstr=Bstr(str(b[i])+"};")
+		ausgr.write(str(r[i])+",")
+		ausgg.write(str(g[i])+",")
+		ausgb.write(str(b[i])+",")
+	if i>=1:
+		ausgr.write(str(r[i])+",")
+		ausgg.write(str(g[i])+",")
+		ausgb.write(str(b[i])+",")
 
-
-ausgr.write(Rstr+"\n"+Gstr+"\n"+Bstr)
 
 ausgr.close()
 ausgg.close()
