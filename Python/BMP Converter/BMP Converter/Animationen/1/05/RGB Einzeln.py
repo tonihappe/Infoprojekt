@@ -1,15 +1,18 @@
 
-filename=str(input("Bitte geben Sie den Dateinamen ein (ohne Endung): "))
-rgbfile =open(filename+".ppm","r")
+filename=str(input("Bitte geben Sie den Dateipfad ein (ohne ''): "))
+rgbfile =open(filename,"r")
+#rgbfile =open("05","r")
 rgbwerte=str(rgbfile.read())
+VarName=input("Bitte geben Sie den gewünschten Namen der Variablen ein: ")
+
 #print (rgbwerte)
 
 r=[0]*99
 g=[0]*99
 b=[0]*99
 ausgr=open(filename+"R.txt", "w")
-ausgg=open(filename+"G.txt", "w")
-ausgb=open(filename+"B.txt", "w")
+#ausgg=open(filename+"G.txt", "w")
+#ausgb=open(filename+"B.txt", "w")
 #ausg.write("'")
 
 #Dateianfang "abschneiden"
@@ -44,14 +47,19 @@ for i in range(0,n,1):
 	print(b[i]+"\n")
 	
 	if i==0:
-		ausgr.write(str(r[i])+",")
-		ausgg.write(str(g[i])+",")
-		ausgb.write(str(b[i])+",")
-	if i>=1:
-		ausgr.write(str(r[i])+",")
-		ausgg.write(str(g[i])+",")
-		ausgb.write(str(b[i])+",")
+		Rstr = ("const int "+VarName+"R {"+str(r[i])+",")
+		Gstr=("const int "+VarName+"G {"+str(g[i])+",")
+		Bstr=("const int "+VarName+"B {"+str(b[i])+",")
+	if (i>=1 and i<=98):
+		Rstr=Rstr(str(r[i])+",")
+		Gstr=Gstr(str(g[i])+",")
+		Bstr=Bstr(str(b[i])+",")
+	if i==99:
+		Rstr=Rstr(str(r[i])+"};")
+		Gstr=Gstr(str(g[i])+"};")
+		Bstr=Bstr(str(b[i])+"};")
 
+ausgr.write(Rstr+"\n"+Gstr+"\n"+Bstr)
 
 ausgr.close()
 ausgg.close()
