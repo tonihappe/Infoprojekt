@@ -1,6 +1,6 @@
 
-filename=str(input("Bitte geben Sie den Dateipfad ein (ohne ''): "))
-rgbfile =open(filename,"r")
+filename=str(input("Bitte geben Sie den Dateipfad ein (ohne ): "))
+rgbfile =open(filename+".ppm","r")
 #rgbfile =open("05","r")
 rgbwerte=str(rgbfile.read())
 VarName=input("Bitte geben Sie den gewünschten Namen der Variablen ein: ")
