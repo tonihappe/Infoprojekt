@@ -29,7 +29,7 @@
 #include <FastLED.h> //FastLED Library zur Steuerung der LEDs
 
 #define PIN 5 //Pin des Arduinos an den die Datenleitung der LED's angeschlossen wurde
-#define HELL 150 //Helligkeit der Matrix (1-255)
+#define HELL 75 //Helligkeit der Matrix (1-255)
 #define LEDZAHL 100 //Anzahl der LED's
 
 
@@ -338,22 +338,13 @@ void loop()
 
   Vierecke(dViereck);//Vierecke (aus Bild)
 
-  Strobo(dStrobo);//Strobo
+  //Strobo(dStrobo);//Strobo
 
   PacMan(dPacMan); //PacMan (aus Bild)
 
-  Strobo(dStrobo);//Strobo
-
   Punkt(dPunkt);//laufender Punkt
-
-  Strobo(dStrobo);//Strobo
 
   Vierecke(dViereck);//Vierecke (aus Bild)
 
-  Strobo(dStrobo);//Strobo
-
   RandomLED(dRandom);//Zufällige Farben auf Zufälligen LED's
-
-  Strobo(dStrobo);//Strobo
-
 }
